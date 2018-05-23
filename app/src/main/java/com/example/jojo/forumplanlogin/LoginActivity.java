@@ -14,6 +14,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText etUsername, etPassword;
     TextView tvRegisterLink;
 
+    UserLocalStore userLocalStore;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +30,35 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         bLogin.setOnClickListener(this);
         tvRegisterLink.setOnClickListener(this);
 
+        userLocalStore = new UserLocalStore(this);
+
+
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (authenticate() == true){
+            System.out.printf("Schon eingeloggt");
+        }
+    }
+
+    private boolean authenticate(){
+        return userLocalStore.getUserLoggedIn();
+    }
+
+
+    //Beim Logout: #2 11min
+    //UserLocalStore
+    //userLocalStore.clearUserData()
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.bLogin:
-
+                User user = new User(null, null);
+                userLocalStore.storeUserData(user);
+                userLocalStore.setUserLoggedIn(true);
 
                 break;
 
