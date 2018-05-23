@@ -1,4 +1,4 @@
-package com.example.basti.moco_plan;
+package com.example.jojo.forumplanlogin;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.basti.moco_plan", appContext.getPackageName());
+        assertEquals("com.example.jojo.forumplanlogin", appContext.getPackageName());
     }
 }

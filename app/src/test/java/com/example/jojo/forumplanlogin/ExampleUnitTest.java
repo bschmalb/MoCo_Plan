@@ -1,4 +1,4 @@
-package com.example.basti.moco_plan;
+package com.example.jojo.forumplanlogin;
 
 import org.junit.Test;
 
