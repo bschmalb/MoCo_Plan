@@ -32,7 +32,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
 
         switch(v.getId()) {
             case R.id.btnEGOG:
-                if ( btnEGOG.getText() == "EG") {
+                if ( btnEGOG.getText().equals("EG")){
                     btnEGOG.setText("OG");
                 } else btnEGOG.setText("EG");
         }
