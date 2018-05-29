@@ -60,6 +60,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 userLocalStore.storeUserData(user);
                 userLocalStore.setUserLoggedIn(true);
 
+                startActivity(new Intent (this, PlanActivity.class));
+
                 break;
 
             case R.id.tvRegisterLink:

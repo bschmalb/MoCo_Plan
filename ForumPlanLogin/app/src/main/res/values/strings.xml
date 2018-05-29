@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Forum Plan Login</string>
     <string name="title_activity_register">Register</string>
+    <string name="title_activity_plan">PlanActivity</string>
 </resources>
