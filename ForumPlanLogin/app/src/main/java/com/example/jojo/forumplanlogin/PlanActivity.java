@@ -13,13 +13,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-public class PlanActivity extends AppCompatActivity implements OnClickListener {
+import uk.co.senab.photoview.PhotoViewAttacher;
+
+public class PlanActivity extends AppCompatActivity implements OnClickListener, View.OnTouchListener {
 
 
     Button btnEGOG;
     ImageView ivEG;
+    ImageView ivOG;
 
     ViewGroup mainLayout;
+    PhotoViewAttacher mAttacher;
+    PhotoViewAttacher nAttacher;
 
     private int xDelta;
     private int yDelta;
@@ -37,17 +42,23 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener {
 
         mainLayout = (ViewGroup) findViewById(R.id.mainLayout);
         ivEG = mainLayout.findViewById(R.id.ivEG);
+        ivOG = mainLayout.findViewById(R.id.ivOG);
 
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(800, 1600);
         ivEG.setLayoutParams(layoutParams);
-        ivEG.setOnTouchListener(new ChoiceTouchListener());
+        ivOG.setLayoutParams(layoutParams);
+        ivEG.setOnTouchListener(this);
+        ivOG.setOnTouchListener(this);
+
+
+        mAttacher = new PhotoViewAttacher(ivEG);
+        nAttacher = new PhotoViewAttacher(ivOG);
+
+        //update
+        //mAttacher.update();
 
 
         }
-
-
-        private final class ChoiceTouchListener implements View.OnTouchListener{
-
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -76,7 +87,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener {
                 mainLayout.invalidate();
                 return true;
             }
-        }
+
     @Override
     public void onClick(View v) {
 
@@ -84,7 +95,13 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener {
             case R.id.btnEGOG:
                 if ( btnEGOG.getText().equals("EG")){
                     btnEGOG.setText("OG");
-                } else btnEGOG.setText("EG");
+                    ivEG.setVisibility(View.INVISIBLE);
+                    ivOG.setVisibility(View.VISIBLE);
+                } else {
+                    btnEGOG.setText("EG");
+                    ivEG.setVisibility(View.VISIBLE);
+                    ivOG.setVisibility(View.INVISIBLE);
+                }
         }
 
     }
