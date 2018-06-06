@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Forum Plan Login</string>
+    <string name="title_forum">Forum</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_plan">PlanActivity</string>
     <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_store_profile">StoreProfileActivity</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
