@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import io.moxd.team9.shoppingMap.R;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class PlanActivity extends AppCompatActivity implements OnClickListener, View.OnTouchListener {

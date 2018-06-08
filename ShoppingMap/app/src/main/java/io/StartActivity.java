@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import io.moxd.interaktiverPlan.R;
+import io.moxd.team9.shoppingMap.R;
 
 
 public class StartActivity extends AppCompatActivity {

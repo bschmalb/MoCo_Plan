@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import io.moxd.team9.shoppingMap.R;
+
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 

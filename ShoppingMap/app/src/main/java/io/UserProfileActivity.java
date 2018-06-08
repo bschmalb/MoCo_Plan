@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import io.moxd.interaktiverPlan.R;
+import io.moxd.team9.shoppingMap.R;
 
 public class UserProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
