@@ -1,10 +1,26 @@
 <resources>
-    <string name="app_name">Forum Plan Login</string>
+    <string name="app_name">Forum Plan</string>
     <string name="title_forum">Forum</string>
     <string name="title_activity_register">Register</string>
-    <string name="title_activity_plan">PlanActivity</string>
-    <string name="title_activity_start">StartActivity</string>
-    <string name="title_activity_store_profile">StoreProfileActivity</string>
-    <string name="open">Open</string>
-    <string name="close">Close</string>
+    <string name="title_activity_plan">Plan</string>
+    <string name="title_activity_start">Start</string>
+    <string name="title_activity_store_profile">Store</string>
+    <string name="open" translatable="false">Open</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="my_account">My Account</string>
+    <string name="login">Login</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="eg">0</string>
+    <string name="og">1</string>
+    <string name="user_login">User Login</string>
+    <string name="enterEmail">Enter your email</string>
+    <string name="enterPw">Enter your password</string>
+    <string name="signIn">SIGN IN</string>
+    <string name="SignUpHere">Not have an account? Signup here!</string>
+    <string name="errorEmail">Please enter email</string>
+    <string name="errorPw">Please enter password</string>
+    <string name="user_registration">User Registration</string>
+    <string name="register">REGISTER</string>
+    <string name="SignInHere">Already Registered? Sign In Here!</string>
 </resources>

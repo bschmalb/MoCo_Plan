@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Forum Plan</string>
+    <string name="title_forum">Forum</string>
+    <string name="title_activity_register">Registrieren</string>
+    <string name="title_activity_plan">Plan</string>
+    <string name="title_activity_start">Start</string>
+    <string name="title_activity_store_profile">Geschäft</string>
+    <string name="my_account">Mein Profil</string>
+    <string name="login">Einloggen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="logout">Ausloggen</string>
+    <string name="eg">EG</string>
+    <string name="og">OG</string>
+    <string name="user_login">Benutzer einloggen</string>
+    <string name="enterEmail">Email eingeben</string>
+    <string name="enterPw">Passwort eingeben</string>
+    <string name="signIn">EINLOGGEN</string>
+    <string name="register">REGISTRIEREN</string>
+    <string name="SignUpHere">Keinen Account? Registriere dich hier!</string>
+    <string name="SignInHere">Du hast schon einen Account? Logge dich hier ein!</string>
+    <string name="errorEmail">Bitte Email eingeben</string>
+    <string name="errorPw">Bitte Passwort eingeben</string>
+    <string name="user_registration">Benutzer Registrieren</string>
+</resources>

@@ -95,9 +95,11 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
                     case(R.id.nav_login):
                         finish();
                         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        break;
                     case(R.id.nav_account):
                         finish();
                         startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
+                        break;
                 }
                 return false;
             }
@@ -137,12 +139,12 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
         switch(v.getId()) {
             case R.id.btnEGOG:
-                if ( btnEGOG.getText().equals("EG")){
-                    btnEGOG.setText("OG");
+                if ( btnEGOG.getText().equals(getResources().getString(R.string.eg))){
+                    btnEGOG.setText(getResources().getString(R.string.og));
                     ivEG.setVisibility(View.INVISIBLE);
                     ivOG.setVisibility(View.VISIBLE);
                 } else {
-                    btnEGOG.setText("EG");
+                    btnEGOG.setText(getResources().getString(R.string.eg));
                     ivEG.setVisibility(View.VISIBLE);
                     ivOG.setVisibility(View.INVISIBLE);
                 }
