@@ -63,11 +63,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    case(R.id.nav_logout):
-                        firebaseAuth.signOut();
-                        finish();
-                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                        break;
+
                 }
                 return false;
             }

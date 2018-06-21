@@ -15,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -27,6 +29,9 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
     Button btnEGOG;
     ImageView ivEG;
     ImageView ivOG;
+
+    TextView nav_header_email;
+    Button buttonRound;
 
     ViewGroup mainLayout;
     PhotoViewAttacher mAttacher;
@@ -44,13 +49,17 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+
+        nv=  findViewById(R.id.nv1);
+
+        nav_header_email= nv.findViewById(R.id.nav_header_email);
+        buttonRound = nv.findViewById(R.id.buttonRound);
+
 
         btnEGOG = findViewById(R.id.btnEGOG);
         btnEGOG.setOnClickListener(this);
@@ -69,6 +78,18 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         mAttacher = new PhotoViewAttacher(ivEG);
         nAttacher = new PhotoViewAttacher(ivOG);
 
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+
+        if(firebaseAuth.getCurrentUser() != null){
+            finish();
+            nav_header_email.setText(user.getEmail());
+
+            nav_header_email.setVisibility(View.VISIBLE);
+            buttonRound.setText("+");
+        }
+
         /**
          * Obere Leiste... aber irgendwie ist alles zerschossen bei "Plan"... :/
          * mDrawerLayout = findViewById(R.id.DrawerLayout);
@@ -78,26 +99,34 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);**/
 
-        nv=  findViewById(R.id.nv1);
+
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    case(R.id.nav_logout):
+                    /*case(R.id.nav_logout):
                         firebaseAuth.signOut();
                         finish();
                         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        break;*/
+                    case (R.id.nav_settings):
+                        //startActivity...
                         break;
-                    case(R.id.nav_login):
-                        finish();
-                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                        break;
-                    case(R.id.nav_account):
-                        finish();
-                        startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
-                        break;
+
                 }
                 return false;
+            }
+        });
+
+
+
+        View headerview = nv.getHeaderView(0);
+        headerview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+
+                startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
             }
         });
 
