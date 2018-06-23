@@ -1,5 +1,6 @@
 package io.moxd.team9.shoppingMap;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -32,6 +33,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
     TextView nav_header_email;
     Button buttonRound;
+    Button btnShowAllStores;
 
     ViewGroup mainLayout;
     PhotoViewAttacher mAttacher;
@@ -49,6 +51,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
 
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +64,9 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         buttonRound = nv.findViewById(R.id.buttonRound);
 
 
+        btnShowAllStores = findViewById(R.id.btnShowAllStores);
+        btnShowAllStores.setOnClickListener(this);
+
         btnEGOG = findViewById(R.id.btnEGOG);
         btnEGOG.setOnClickListener(this);
 
@@ -68,9 +74,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         ivEG = mainLayout.findViewById(R.id.ivEG);
         ivOG = mainLayout.findViewById(R.id.ivOG);
 
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(800, 1600);
-        ivEG.setLayoutParams(layoutParams);
-        ivOG.setLayoutParams(layoutParams);
+
         ivEG.setOnTouchListener(this);
         ivOG.setOnTouchListener(this);
 
@@ -80,53 +84,51 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
 
         firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = firebaseAuth.getCurrentUser();
+
 
         if(firebaseAuth.getCurrentUser() != null){
-            finish();
-            nav_header_email.setText(user.getEmail());
+            //finish();
+            //FirebaseUser user = firebaseAuth.getCurrentUser();
+            //nav_header_email.setText(user.getEmail());
 
             nav_header_email.setVisibility(View.VISIBLE);
-            buttonRound.setText("+");
+            //buttonRound.setText("ME");
         }
 
-        /**
-         * Obere Leiste... aber irgendwie ist alles zerschossen bei "Plan"... :/
-         * mDrawerLayout = findViewById(R.id.DrawerLayout);
+        //ActionBar
+        mDrawerLayout = findViewById(R.id.DrawerLayout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);**/
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    /*case(R.id.nav_logout):
-                        firebaseAuth.signOut();
-                        finish();
-                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                        break;*/
+                    case(R.id.nav_friends):
+                        //finish();
+                        //startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        break;
                     case (R.id.nav_settings):
+                        //finish()
                         //startActivity...
                         break;
-
                 }
                 return false;
             }
         });
 
 
-
-        View headerview = nv.getHeaderView(0);
+        final View headerview = nv.getHeaderView(0);
         headerview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
 
-                startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
             }
         });
 
@@ -163,7 +165,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
     public void onClick(View v) {
 
         switch(v.getId()) {
-            case R.id.btnEGOG:
+            case (R.id.btnEGOG):
                 if ( btnEGOG.getText().equals(getResources().getString(R.string.eg))){
                     btnEGOG.setText(getResources().getString(R.string.og));
                     ivEG.setVisibility(View.INVISIBLE);
@@ -173,8 +175,27 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
                     ivEG.setVisibility(View.VISIBLE);
                     ivOG.setVisibility(View.INVISIBLE);
                 }
+                break;
+            case (R.id.buttonRound):
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
+                    break;
+            case (R.id.btnShowAllStores):
+                finish();
+                startActivity(new Intent(getApplicationContext(), StoreListActivity.class));
+                break;
+
         }
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

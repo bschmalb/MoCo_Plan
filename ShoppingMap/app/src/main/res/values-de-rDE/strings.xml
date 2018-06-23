@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Forum Plan</string>
+    <string name="app_name">Shopping Map</string>
     <string name="title_forum">Forum</string>
     <string name="title_activity_register">Registrieren</string>
     <string name="title_activity_plan">Plan</string>
@@ -22,4 +22,8 @@
     <string name="errorEmail">Bitte Email eingeben</string>
     <string name="errorPw">Bitte Passwort eingeben</string>
     <string name="user_registration">Benutzer Registrieren</string>
+    <string name="title_activity_store_list">Liste der Geschäfte</string>
+    <string name="H1">Bücher/Schreibwaren</string>
+    <string name="H2">Dienstleistung</string>
+    <string name="H3">Drogerie/Optik</string>
 </resources>

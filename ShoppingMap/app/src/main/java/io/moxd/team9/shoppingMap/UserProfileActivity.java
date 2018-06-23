@@ -39,6 +39,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
         if(firebaseAuth.getCurrentUser() == null){
             finish();
             startActivity(new Intent(this, LoginActivity.class));
+
         }
 
         FirebaseUser user = firebaseAuth.getCurrentUser();

@@ -24,21 +24,28 @@
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PlanActivity"
             android:label="@string/title_forum"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/user_login"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PlanActivity" />
+        </activity>
         <activity android:name=".UserProfileActivity" />
         <activity
             android:name=".StoreProfileActivity"
             android:label="@string/title_activity_store_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".UserProfileEditActivity"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".StoreListActivity"
+            android:label="@string/title_activity_store_list"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
