@@ -27,7 +27,6 @@ public class StoreListActivity extends AppCompatActivity implements View.OnClick
         switch(v.getId()){
 
             case(R.id.buttonBackToMap):
-                finish();
                 startActivity(new Intent(getApplicationContext(), PlanActivity.class));
                 break;
         }

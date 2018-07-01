@@ -78,9 +78,9 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         setContentView(R.layout.activity_plan);
 
 
-        nv=  findViewById(R.id.nv1);
+        nv = findViewById(R.id.nv1);
 
-        nav_header_email= nv.findViewById(R.id.nav_header_email);
+        nav_header_email = nv.findViewById(R.id.nav_header_email);
         buttonRound = nv.findViewById(R.id.buttonRound);
 
 
@@ -106,16 +106,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-        if(firebaseAuth.getCurrentUser() != null){
-            //finish();
-            //FirebaseUser user = firebaseAuth.getCurrentUser();
-            //nav_header_email.setText(user.getEmail());
-
-            nav_header_email.setVisibility(View.VISIBLE);
-            //buttonRound.setText("ME");
-        }
-
-            //ActionBar
+        //ActionBar
         mDrawerLayout = findViewById(R.id.DrawerLayout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
@@ -127,14 +118,14 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case(R.id.nav_friends):
-                        //finish();
+                switch (item.getItemId()) {
+                    case (R.id.nav_friends):
+
                         //startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         break;
                     case (R.id.nav_settings):
-                        //finish()
-                        //startActivity...
+                        //TODO: Change!!!
+                        startActivity(new Intent(getApplicationContext(), StoreListActivity.class));
                         break;
                 }
                 return false;
@@ -146,13 +137,21 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         headerview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    finish();
-                    startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
+                startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
 
             }
         });
 
 
+        if (firebaseAuth.getCurrentUser() != null) {
+            System.out.println("Bin doch nicht verwirrt!");
+            //finish();
+            //FirebaseUser user = firebaseAuth.getCurrentUser();
+            //nav_header_email.setText(user.getEmail());
+
+            //nav_header_email.setVisibility(View.VISIBLE);
+            //buttonRound.setText("ME");
+        }
 
 
         //Geo/GPS Push Notification with BroadcastReceiver
@@ -182,8 +181,6 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
         IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
         registerReceiver(new ProximityIntentReceiver(), filter);
-
-
 
 
     }
@@ -231,11 +228,9 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
                 }
                 break;
             case (R.id.buttonRound):
-                    finish();
                     startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
                     break;
             case (R.id.btnShowAllStores):
-                finish();
                 startActivity(new Intent(getApplicationContext(), StoreListActivity.class));
                 break;
 

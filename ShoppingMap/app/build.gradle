@@ -14,6 +14,7 @@ android {
         versionCode versionMajor * 100 + versionMinor * 10 + versionBuild
         versionName "${versionMajor}.${versionMinor} alpha"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -21,6 +22,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 
 }
 
