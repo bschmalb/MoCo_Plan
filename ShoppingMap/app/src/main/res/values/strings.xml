@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Forum Plan</string>
+    <string name="app_name">Shopping Map</string>
     <string name="title_forum">Forum</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_plan">Plan</string>
-    <string name="title_activity_start">Start</string>
+    <string name="title_activity_start">Shopping Map</string>
     <string name="title_activity_store_profile">Store</string>
     <string name="open" translatable="false">Open</string>
     <string name="close" translatable="false">Close</string>
@@ -24,45 +24,119 @@
     <string name="register">REGISTER</string>
     <string name="SignInHere">Already Registered? Sign In Here!</string>
     <string name="title_activity_store_list">StoreListActivity</string>
+    <string name="user_profile">User Profile</string>
 
     <!--Stores-->
 
-    <string name ="H1"><u>Book / Scribing Utensils</u></string>
-    <string name ="H1S1">Büro Exklusiv</string>
+    <string name="H1"><u>Book / Scribing Utensils</u></string>
+    <string name="H1S1">Büro Exklusiv</string>
 
     <string name="H2"><u>Service</u></string>
-    <string name ="H2S1">AggerEnergie</string>
-    <string name = "H2S2">Barbier</string>
-    <string name = "H2S3">Postbank</string>
-    <string name = "H2S4">FotoFix</string>
-    <string name = "H2S5">Hair Express</string>
-    <string name = "H2S6">Kiddieland</string>
-    <string name = "H2S7">Nailtastic</string>
-    <string name = "H2S8">Remass Massage</string>
-    <string name = "H2S9">Roland Reinigung</string>
-    <string name = "H2S10">Service Punkt</string>
-    <string name = "H2S11">Reisebüro Sonnenklar</string>
-    <string name = "H2S12">Sparkasse </string>
-    <string name = "H2S13">Super Cut</string>
-    <string name = "H2S14">TH Köln</string>
-    <string name = "H2S15">Volksbank</string>
+    <string name="H2S1">AggerEnergie</string>
+    <string name="H2S2">Barbier</string>
+    <string name="H2S3">Postbank</string>
+    <string name="H2S4">FotoFix</string>
+    <string name="H2S5">Hair Express</string>
+    <string name="H2S6">Kiddieland</string>
+    <string name="H2S7">Nailtastic</string>
+    <string name="H2S8">Remass Massage</string>
+    <string name="H2S9">Roland Reinigung</string>
+    <string name="H2S10">Service Punkt</string>
+    <string name="H2S11">Reisebüro Sonnenklar</string>
+    <string name="H2S12">Sparkasse </string>
+    <string name="H2S13">Super Cut</string>
+    <string name="H2S14">TH Köln</string>
+    <string name="H2S15">Volksbank</string>
 
-    <string name ="H3"><u>Drug Store/Optics</u></string>
-    <string name = "H3S1">eyes + more</string>
-    <string name = "H3S2">Müller</string>
+    <string name="H3"><u>Drug Store/Optics</u></string>
+    <string name="H3S1">eyes + more</string>
+    <string name="H3S2">Müller</string>
 
-    <string name ="H4"><u>Gastronomy</u></string>
-    <string name = "H4S1">Best Döner</string>
-    <string name = "H4S2">Ditsch</string>
-    <string name = "H4S3">Chocolate Company</string>
-    <string name = "H4S4">Eiscafé Martini</string>
-    <string name = "H4S5">Grill Heuser</string>
-    <string name = "H4S6">Jade</string>
-    <string name = "H4S7">Kunstwerk</string>
-    <string name = "H4S8">Landbäckerei Sommer</string>
-    <string name = "H4S9">Olive Buffet Deluxe</string>
-    <string name = "H4S10">Süße Ecke</string>
-    <string name = "H4S11">Tasty Donuts</string>
+    <string name="H4"><u>Gastronomy</u></string>
+    <string name="H4S1">Best Döner</string>
+    <string name="H4S2">Ditsch</string>
+    <string name="H4S3">Chocolate Company</string>
+    <string name="H4S4">Eiscafé Martini</string>
+    <string name="H4S5">Grill Heuser</string>
+    <string name="H4S6">Jade</string>
+    <string name="H4S7">Kunstwerk</string>
+    <string name="H4S8">Landbäckerei Sommer</string>
+    <string name="H4S9">Olive Buffet Deluxe</string>
+    <string name="H4S10">Süße Ecke</string>
+    <string name="H4S11">Tasty Donuts</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
 
 
 </resources>

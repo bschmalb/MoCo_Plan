@@ -1,10 +1,17 @@
 package io.moxd.team9.shoppingMap;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +33,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
 public class PlanActivity extends AppCompatActivity implements OnClickListener, View.OnTouchListener {
 
 
-
+    //Layout
     Button btnEGOG;
     ImageView ivEG;
     ImageView ivOG;
@@ -46,8 +53,21 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
     private ActionBarDrawerToggle mToggle;
     NavigationView nv;
 
-
+    //Firebase
     private FirebaseAuth firebaseAuth;
+
+    //Geo
+    private static final long POINT_RADIUS = 100; // in Meters
+    private static final long PROX_ALERT_EXPIRATION = -1;
+
+    //GPS Koordinaten vom Forum Gummersbach
+    private static final double POINT_LATITUDE = 51.02459368705052;
+    private static final double POINT_LONGITUDE = 7.565631866455078;
+
+    private static final String PROX_ALERT_INTENT =
+            "io.moxd.team9.shoppingMap";
+
+    private LocationManager locationManager;
 
 
 
@@ -58,9 +78,9 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         setContentView(R.layout.activity_plan);
 
 
-        nv=  findViewById(R.id.nv1);
+        nv = findViewById(R.id.nv1);
 
-        nav_header_email= nv.findViewById(R.id.nav_header_email);
+        nav_header_email = nv.findViewById(R.id.nav_header_email);
         buttonRound = nv.findViewById(R.id.buttonRound);
 
 
@@ -86,15 +106,6 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-        if(firebaseAuth.getCurrentUser() != null){
-            //finish();
-            //FirebaseUser user = firebaseAuth.getCurrentUser();
-            //nav_header_email.setText(user.getEmail());
-
-            nav_header_email.setVisibility(View.VISIBLE);
-            //buttonRound.setText("ME");
-        }
-
         //ActionBar
         mDrawerLayout = findViewById(R.id.DrawerLayout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -107,14 +118,14 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case(R.id.nav_friends):
-                        //finish();
+                switch (item.getItemId()) {
+                    case (R.id.nav_friends):
+
                         //startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         break;
                     case (R.id.nav_settings):
-                        //finish()
-                        //startActivity...
+                        //TODO: Change!!!
+                        startActivity(new Intent(getApplicationContext(), StoreListActivity.class));
                         break;
                 }
                 return false;
@@ -126,11 +137,51 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         headerview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    finish();
-                    startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
+                startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
 
             }
         });
+
+
+        if (firebaseAuth.getCurrentUser() != null) {
+            System.out.println("Bin doch nicht verwirrt!");
+            //finish();
+            //FirebaseUser user = firebaseAuth.getCurrentUser();
+            //nav_header_email.setText(user.getEmail());
+
+            //nav_header_email.setVisibility(View.VISIBLE);
+            //buttonRound.setText("ME");
+        }
+
+
+        //Geo/GPS Push Notification with BroadcastReceiver
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        Intent intent = new Intent(PROX_ALERT_INTENT);
+        PendingIntent proximityIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            System.out.println("No Permission");
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        locationManager.addProximityAlert(
+                POINT_LATITUDE, // the latitude of the central point of the alert region
+                POINT_LONGITUDE, // the longitude of the central point of the alert region
+                POINT_RADIUS, // the radius of the central point of the alert region, in meters
+                PROX_ALERT_EXPIRATION, // time for this proximity alert, in milliseconds, or -1 to indicate no expiration
+                proximityIntent // will be used to generate an Intent to fire when entry to or exit from the alert region is detected
+        );
+
+        IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
+        registerReceiver(new ProximityIntentReceiver(), filter);
+
 
     }
             @Override
@@ -177,11 +228,9 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
                 }
                 break;
             case (R.id.buttonRound):
-                    finish();
                     startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
                     break;
             case (R.id.btnShowAllStores):
-                finish();
                 startActivity(new Intent(getApplicationContext(), StoreListActivity.class));
                 break;
 

@@ -37,11 +37,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        if(firebaseAuth.getCurrentUser() != null){
+       /** if(firebaseAuth.getCurrentUser() != null){
             //UserProfileActivity here
-            finish();
             startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
-        }
+        }***/
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -83,8 +82,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressDialog.dismiss();
 
                 if(task.isSuccessful()){
-                    //start the UserProfileActivity
-                    finish();
+                    //start the UserProfileActivity or the previous Activity...
                     startActivity(new Intent(getApplicationContext(), PlanActivity.class));
 
                 }
@@ -92,6 +90,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+        startActivity(new Intent(this, PlanActivity.class));
     }
 
 

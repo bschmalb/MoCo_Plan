@@ -37,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         if(firebaseAuth.getCurrentUser() != null){
             //UserProfileActivity here
-            finish();
+            //finish();
             startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
         }
 
@@ -85,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 if(task.isSuccessful()){
                     //user is successfully registered and logged in
                     Toast.makeText(RegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                    finish();
+                    //finish();
                     startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
                 } else {
                     Toast.makeText(RegisterActivity.this, "Could not register. Please try again", Toast.LENGTH_SHORT).show();

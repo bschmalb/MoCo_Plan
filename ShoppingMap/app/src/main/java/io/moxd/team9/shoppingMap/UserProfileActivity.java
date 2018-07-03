@@ -37,7 +37,6 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
         firebaseAuth = FirebaseAuth.getInstance();
 
         if(firebaseAuth.getCurrentUser() == null){
-            finish();
             startActivity(new Intent(this, LoginActivity.class));
 
         }
@@ -75,6 +74,13 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
     }
 
+
+    @Override
+    public void onBackPressed(){
+        startActivity(new Intent(this, PlanActivity.class));
+    }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -89,8 +95,9 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
         if(v == buttonLogout){
             firebaseAuth.signOut();
+            //Hier finish() sinnvoll, da wir uns ausloggen und nicht mehr aufs Profil zugreifen wollen
             finish();
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, PlanActivity.class));
 
         }
 
