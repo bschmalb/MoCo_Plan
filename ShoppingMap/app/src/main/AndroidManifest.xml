@@ -47,16 +47,14 @@
             android:label="@string/title_activity_store_list"
             android:theme="@style/AppTheme" />
         <activity
-<<<<<<< HEAD
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme" />
-    </application>
-=======
+
+        <activity
             android:name=".UserProfileEditActivity"
             android:label="Edit Profile"
             android:theme="@style/AppTheme" />
 </application>
->>>>>>> 2108198dfec8118a0de258584417afd236a470bf
 
 </manifest>
