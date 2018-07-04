@@ -21,6 +21,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
     private TextView textViewUserEmail;
     private Button buttonLogout;
+    private Button buttonEdit;
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -51,6 +52,11 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
         buttonLogout.setOnClickListener(this);
 
+        buttonEdit = (Button) findViewById(R.id.buttonEdit);
+
+        buttonEdit.setOnClickListener(this);
+
+
         mDrawerLayout = findViewById(R.id.DrawerLayoutUser);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
@@ -68,9 +74,6 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
                 return false;
             }
         });
-
-
-
 
     }
 
@@ -97,7 +100,13 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
             firebaseAuth.signOut();
             //Hier finish() sinnvoll, da wir uns ausloggen und nicht mehr aufs Profil zugreifen wollen
             finish();
-            startActivity(new Intent(this, PlanActivity.class));
+            startActivity(new Intent(UserProfileActivity.this, PlanActivity.class));
+
+        }
+
+        if(v == buttonEdit){
+            finish();
+            startActivity(new Intent(UserProfileActivity.this, UserProfileEditActivity.class));
 
         }
 
