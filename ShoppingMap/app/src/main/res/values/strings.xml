@@ -26,7 +26,12 @@
     <string name="signingIn">Signing In…</string>
     <string name="title_activity_store_list">StoreListActivity</string>
     <string name="user_profile">User Profile</string>
+<<<<<<< HEAD
     <string name="welcome">Welcome </string>
+=======
+    <string name= "welcome">Welcome </string>
+    <string name= "buttonSave">Save</string>
+>>>>>>> 2108198dfec8118a0de258584417afd236a470bf
 
     <!--Stores-->
 
