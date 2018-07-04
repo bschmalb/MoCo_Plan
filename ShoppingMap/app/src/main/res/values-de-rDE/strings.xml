@@ -31,6 +31,19 @@
     <string name="H2"><u>Dienstleistung</u></string>
     <string name="H3"><u>Drogerie/Optik</u></string>
     <string name="H4"><u>Gastronomie</u></string>
+    <string name="back_to_map">Zurück zur Karte</string>
+    <string name="show_all_stores">Alle Geschäfte</string>
+    <string name="notification">Nutze unsere Shopping Map!</string>
+    <string name="pref_header_notifications">Benachrichtigungen</string>
+    <string name="pref_title_new_message_notifications">Neue Benachrichtigungen</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="signingIn">anmelden…</string>
+    <string name="welcome">"Willkommen "</string>
+    <string name="registeringUser">Registrieren...</string>
+    <string name="registerSuccess">Erfolgreich registriert</string>
+    <string name="registerError">Registrierung fehlgeschlagen. Bitte versuche es noch einmal</string>
+    <string name="add_friends">Freunde hinzufügen</string>
+    <string name="profile">Profil</string>
 
 
 </resources>

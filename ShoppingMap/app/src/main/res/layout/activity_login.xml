@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="User Login"
+            android:text="@string/user_login"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/colorAccent" />
 
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:hint="Enter your email"
+            android:hint="@string/enterEmail"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:hint="Enter your password"
+            android:hint="@string/enterPw"
             android:inputType="textPassword" />
 
         <Button
@@ -46,13 +46,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Sign In" />
+            android:text="@string/signIn" />
 
         <TextView
             android:id="@+id/textViewSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Not have an account? Signup here"
+            android:text="@string/SignUpHere"
             android:textAlignment="center" />
 
     </LinearLayout>

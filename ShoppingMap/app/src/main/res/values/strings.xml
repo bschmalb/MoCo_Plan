@@ -23,47 +23,49 @@
     <string name="user_registration">User Registration</string>
     <string name="register">REGISTER</string>
     <string name="SignInHere">Already Registered? Sign In Here!</string>
+    <string name="signingIn">Signing In…</string>
     <string name="title_activity_store_list">StoreListActivity</string>
     <string name="user_profile">User Profile</string>
+    <string name = "welcome">Welcome </string>
 
     <!--Stores-->
 
     <string name="H1"><u>Book / Scribing Utensils</u></string>
-    <string name="H1S1">Büro Exklusiv</string>
+    <string name="H1S1" translatable="false">Büro Exklusiv</string>
 
     <string name="H2"><u>Service</u></string>
-    <string name="H2S1">AggerEnergie</string>
-    <string name="H2S2">Barbier</string>
-    <string name="H2S3">Postbank</string>
-    <string name="H2S4">FotoFix</string>
-    <string name="H2S5">Hair Express</string>
-    <string name="H2S6">Kiddieland</string>
-    <string name="H2S7">Nailtastic</string>
-    <string name="H2S8">Remass Massage</string>
-    <string name="H2S9">Roland Reinigung</string>
-    <string name="H2S10">Service Punkt</string>
-    <string name="H2S11">Reisebüro Sonnenklar</string>
-    <string name="H2S12">Sparkasse </string>
-    <string name="H2S13">Super Cut</string>
-    <string name="H2S14">TH Köln</string>
-    <string name="H2S15">Volksbank</string>
+    <string name="H2S1" translatable="false">AggerEnergie</string>
+    <string name="H2S2" translatable="false">Barbier</string>
+    <string name="H2S3" translatable="false">Postbank</string>
+    <string name="H2S4" translatable="false">FotoFix</string>
+    <string name="H2S5" translatable="false">Hair Express</string>
+    <string name="H2S6" translatable="false">Kiddieland</string>
+    <string name="H2S7" translatable="false">Nailtastic</string>
+    <string name="H2S8" translatable="false">Remass Massage</string>
+    <string name="H2S9" translatable="false">Roland Reinigung</string>
+    <string name="H2S10" translatable="false">Service Punkt</string>
+    <string name="H2S11" translatable="false">Reisebüro Sonnenklar</string>
+    <string name="H2S12" translatable="false">Sparkasse </string>
+    <string name="H2S13" translatable="false">Super Cut</string>
+    <string name="H2S14" translatable="false">TH Köln</string>
+    <string name="H2S15" translatable="false">Volksbank</string>
 
     <string name="H3"><u>Drug Store/Optics</u></string>
-    <string name="H3S1">eyes + more</string>
-    <string name="H3S2">Müller</string>
+    <string name="H3S1" translatable="false">eyes + more</string>
+    <string name="H3S2" translatable="false">Müller</string>
 
     <string name="H4"><u>Gastronomy</u></string>
-    <string name="H4S1">Best Döner</string>
-    <string name="H4S2">Ditsch</string>
-    <string name="H4S3">Chocolate Company</string>
-    <string name="H4S4">Eiscafé Martini</string>
-    <string name="H4S5">Grill Heuser</string>
-    <string name="H4S6">Jade</string>
-    <string name="H4S7">Kunstwerk</string>
-    <string name="H4S8">Landbäckerei Sommer</string>
-    <string name="H4S9">Olive Buffet Deluxe</string>
-    <string name="H4S10">Süße Ecke</string>
-    <string name="H4S11">Tasty Donuts</string>
+    <string name="H4S1" translatable="false">Best Döner</string>
+    <string name="H4S2" translatable="false">Ditsch</string>
+    <string name="H4S3" translatable="false">Chocolate Company</string>
+    <string name="H4S4" translatable="false">Eiscafé Martini</string>
+    <string name="H4S5" translatable="false">Grill Heuser</string>
+    <string name="H4S6" translatable="false">Jade</string>
+    <string name="H4S7" translatable="false">Kunstwerk</string>
+    <string name="H4S8" translatable="false">Landbäckerei Sommer</string>
+    <string name="H4S9" translatable="false">Olive Buffet Deluxe</string>
+    <string name="H4S10" translatable="false">Süße Ecke</string>
+    <string name="H4S11" translatable="false">Tasty Donuts</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->
@@ -137,6 +139,14 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="show_all_stores">Show All Stores</string>
+    <string name="back_to_map">Back To Map</string>
+    <string name="notification">Use our Shopping Map!</string>
+    <string name="registeringUser">Registering User…</string>
+    <string name="registerSuccess">Registered Successfully</string>
+    <string name="registerError">Could not register. Please try again</string>
+    <string name="add_friends">Add Friends</string>
+    <string name="profile">Profile</string>
 
 
 </resources>

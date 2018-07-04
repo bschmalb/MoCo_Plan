@@ -20,7 +20,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@color/colorAccent"
-        android:text="Back To Map"
+        android:text="@string/back_to_map"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
@@ -34,7 +34,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="@string/H1"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="#E5007D"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/H3"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="#D60651"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
@@ -60,7 +60,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
@@ -74,7 +74,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
         android:text="@string/H2"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
@@ -89,7 +89,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S1"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -101,7 +101,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S8"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -113,7 +113,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H3S2"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="#D60651"
         app:layout_constraintStart_toStartOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
@@ -125,7 +125,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H3S1"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="#D60651"
         app:layout_constraintStart_toStartOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
@@ -137,7 +137,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S11"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
@@ -149,7 +149,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S10"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
@@ -161,7 +161,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S9"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
@@ -173,7 +173,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S8"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
@@ -185,7 +185,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S7"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
@@ -197,7 +197,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S6"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
@@ -209,7 +209,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S5"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
@@ -221,7 +221,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S4"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
@@ -233,7 +233,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S3"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
@@ -245,7 +245,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S2"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
@@ -257,7 +257,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H4S1"
-        android:textColor="#d16e30"
+        android:textColor="#F39100"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
@@ -269,7 +269,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S15"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -281,7 +281,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S14"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -305,7 +305,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S13"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -317,7 +317,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S12"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -329,7 +329,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S11"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -341,7 +341,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S10"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -353,7 +353,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S9"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -365,7 +365,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S7"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -377,7 +377,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S6"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -389,7 +389,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S5"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -401,7 +401,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S4"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -413,7 +413,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S3"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -425,7 +425,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H2S2"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="#652282"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -437,7 +437,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/H1S1"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="#E5007D"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 

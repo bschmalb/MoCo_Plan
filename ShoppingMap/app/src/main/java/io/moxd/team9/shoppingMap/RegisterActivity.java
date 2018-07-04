@@ -61,20 +61,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         if(TextUtils.isEmpty(email)) {
             //email is empty
-            Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT ).show();
+            Toast.makeText(this, R.string.errorEmail, Toast.LENGTH_SHORT ).show();
             //stop the function from execution further
             return;
         }
 
         if(TextUtils.isEmpty(password)) {
             //password is empty
-            Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.errorPw, Toast.LENGTH_SHORT).show();
             //stop the function from execution further
             return;
         }
 
         //if validations are ok, show first progress
-        progressDialog.setMessage("Registering User...");
+        progressDialog.setMessage(getString(R.string.registeringUser));
         progressDialog.show();
 
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -84,11 +84,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 progressDialog.dismiss();
                 if(task.isSuccessful()){
                     //user is successfully registered and logged in
-                    Toast.makeText(RegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, R.string.registerSuccess, Toast.LENGTH_SHORT).show();
                     //finish();
                     startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
                 } else {
-                    Toast.makeText(RegisterActivity.this, "Could not register. Please try again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, R.string.registerError, Toast.LENGTH_SHORT).show();
                     }
             }
         });

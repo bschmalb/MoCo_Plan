@@ -50,21 +50,19 @@ class ProximityIntentReceiver extends BroadcastReceiver {
                     .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                     .setSmallIcon(R.drawable.logo)
                     .setContentTitle("Forum Gummersbach")
-                    .setContentText("Nutze unsere Shopping Map!")
+                    .setContentText(context.getString(R.string.notification))
                     .setContentIntent(resultPendingIntent);
 
             nm.notify(NOTIFICATION_ID, builder.build());
 
             //Info
             Log.d(getClass().getSimpleName(), "entering");
-            Toast.makeText(context,
-                    "Entering", Toast.LENGTH_LONG).show();
+
 
 
         } else {
             Log.d(getClass().getSimpleName(), "exiting");
-            Toast.makeText(context,
-                    "Exiting", Toast.LENGTH_LONG).show();
+
         }
 
     }

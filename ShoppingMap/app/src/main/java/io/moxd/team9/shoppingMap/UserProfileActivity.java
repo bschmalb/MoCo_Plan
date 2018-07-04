@@ -45,7 +45,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
 
-        textViewUserEmail.setText("Welcome "+user.getEmail());
+        textViewUserEmail.setText(R.string.welcome +user.getEmail());
 
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
 

@@ -60,20 +60,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(TextUtils.isEmpty(email)) {
             //email is empty
-            Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT ).show();
+            Toast.makeText(this, R.string.errorEmail, Toast.LENGTH_SHORT ).show();
             //stop the function from execution further
             return;
         }
 
         if(TextUtils.isEmpty(password)) {
             //password is empty
-            Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.errorPw, Toast.LENGTH_SHORT).show();
             //stop the function from execution further
             return;
         }
 
         //if validations are ok, show first progress
-        progressDialog.setMessage("Signing In...");
+        progressDialog.setMessage(this.getString(R.string.signingIn));
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

@@ -34,7 +34,7 @@
         android:layout_marginTop="16dp"
         android:background="@layout/circle_layout"
         android:onClick="onClick"
-        android:text="Login"
+        android:text="@string/profile"
         android:textColor="#838383"
         android:textSize="12sp"
         android:layout_alignParentLeft="true"
