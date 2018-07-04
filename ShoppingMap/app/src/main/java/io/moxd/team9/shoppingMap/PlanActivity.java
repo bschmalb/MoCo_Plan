@@ -57,7 +57,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
     private FirebaseAuth firebaseAuth;
 
     //Geo
-    private static final long POINT_RADIUS = 100; // in Meters
+    private static final long POINT_RADIUS = 100; // in Meter
     private static final long PROX_ALERT_EXPIRATION = -1;
 
     //GPS Koordinaten vom Forum Gummersbach
@@ -124,8 +124,8 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
                         //startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         break;
                     case (R.id.nav_settings):
-                        //TODO: Change!!!
-                        startActivity(new Intent(getApplicationContext(), StoreListActivity.class));
+
+                        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                         break;
                 }
                 return false;

@@ -26,14 +26,14 @@
     <string name="signingIn">Signing In…</string>
     <string name="title_activity_store_list">StoreListActivity</string>
     <string name="user_profile">User Profile</string>
-    <string name = "welcome">Welcome </string>
+    <string name="welcome">Welcome </string>
 
     <!--Stores-->
 
-    <string name="H1"><u>Book / Scribing Utensils</u></string>
+    <string name="H1">Book / Scribing Utensils</string>
     <string name="H1S1" translatable="false">Büro Exklusiv</string>
 
-    <string name="H2"><u>Service</u></string>
+    <string name="H2">Service</string>
     <string name="H2S1" translatable="false">AggerEnergie</string>
     <string name="H2S2" translatable="false">Barbier</string>
     <string name="H2S3" translatable="false">Postbank</string>
@@ -50,11 +50,11 @@
     <string name="H2S14" translatable="false">TH Köln</string>
     <string name="H2S15" translatable="false">Volksbank</string>
 
-    <string name="H3"><u>Drug Store/Optics</u></string>
+    <string name="H3">Drug Store/Optics</string>
     <string name="H3S1" translatable="false">eyes + more</string>
     <string name="H3S2" translatable="false">Müller</string>
 
-    <string name="H4"><u>Gastronomy</u></string>
+    <string name="H4">Gastronomy</string>
     <string name="H4S1" translatable="false">Best Döner</string>
     <string name="H4S2" translatable="false">Ditsch</string>
     <string name="H4S3" translatable="false">Chocolate Company</string>
@@ -147,6 +147,8 @@
     <string name="registerError">Could not register. Please try again</string>
     <string name="add_friends">Add Friends</string>
     <string name="profile">Profile</string>
+    <string name="H5">Lebensmittel/Genussmittel</string>
+    <string name="H6">Mode</string>
 
 
 </resources>

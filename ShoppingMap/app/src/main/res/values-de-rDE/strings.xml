@@ -27,10 +27,10 @@
 
 
     <string name="title_activity_store_list">Liste der Geschäfte</string>
-    <string name="H1"><u>Bücher/Schreibwaren</u></string>
-    <string name="H2"><u>Dienstleistung</u></string>
-    <string name="H3"><u>Drogerie/Optik</u></string>
-    <string name="H4"><u>Gastronomie</u></string>
+    <string name="H1">Bücher/Schreibwaren</string>
+    <string name="H2">Dienstleistung</string>
+    <string name="H3">Drogerie/Optik</string>
+    <string name="H4">Gastronomie</string>
     <string name="back_to_map">Zurück zur Karte</string>
     <string name="show_all_stores">Alle Geschäfte</string>
     <string name="notification">Nutze unsere Shopping Map!</string>
