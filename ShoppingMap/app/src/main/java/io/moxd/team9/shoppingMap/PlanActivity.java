@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -24,13 +25,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
-public class PlanActivity extends AppCompatActivity implements OnClickListener, View.OnTouchListener {
+public class PlanActivity extends AppCompatActivity implements OnClickListener{
 
 
     //Layout
@@ -93,10 +95,6 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
         mainLayout = (ViewGroup) findViewById(R.id.mainLayout);
         ivEG = mainLayout.findViewById(R.id.ivEG);
         ivOG = mainLayout.findViewById(R.id.ivOG);
-
-
-        ivEG.setOnTouchListener(this);
-        ivOG.setOnTouchListener(this);
 
 
         mAttacher = new PhotoViewAttacher(ivEG);
@@ -184,33 +182,7 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener, 
 
 
     }
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                final int x = (int) event.getRawX();
-                final int y = (int) event.getRawY();
 
-                switch ( event.getAction() & MotionEvent.ACTION_MASK){
-
-                    case MotionEvent.ACTION_DOWN:
-                        RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) v.getLayoutParams();
-                        xDelta = x- lParams.leftMargin;
-                        yDelta = y - lParams.topMargin;
-                        break;
-
-
-                    case MotionEvent.ACTION_MOVE:
-                        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) v.getLayoutParams();
-                        layoutParams.leftMargin = x- xDelta;
-                        layoutParams.topMargin = y-yDelta;
-                        layoutParams.rightMargin = -2500;
-                        layoutParams.bottomMargin = -2500;
-                        v.setLayoutParams(layoutParams);
-                        break;
-
-                }
-                mainLayout.invalidate();
-                return true;
-            }
 
     @Override
     public void onClick(View v) {

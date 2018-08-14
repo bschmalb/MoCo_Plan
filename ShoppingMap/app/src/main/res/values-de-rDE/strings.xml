@@ -34,8 +34,6 @@
     <string name="back_to_map">Zurück zur Karte</string>
     <string name="show_all_stores">Alle Geschäfte</string>
     <string name="notification">Nutze unsere Shopping Map!</string>
-    <string name="pref_header_notifications">Benachrichtigungen</string>
-    <string name="pref_title_new_message_notifications">Neue Benachrichtigungen</string>
     <string name="title_activity_settings">Einstellungen</string>
     <string name="signingIn">anmelden…</string>
     <string name="welcome">"Willkommen "</string>
@@ -44,6 +42,9 @@
     <string name="registerError">Registrierung fehlgeschlagen. Bitte versuche es noch einmal</string>
     <string name="add_friends">Freunde hinzufügen</string>
     <string name="profile">Profil</string>
+    <string name="buttonSave">Speichern</string>
+    <string name="H5">Food</string>
+    <string name="H6">Fashion</string>
 
 
 </resources>

@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.location.LocationManager;
 import android.media.RingtoneManager;
@@ -15,10 +16,15 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
+
+
 class ProximityIntentReceiver extends BroadcastReceiver {
 
     private static final int NOTIFICATION_ID = 1;
     private static final String NOTIFICATION_CHANNEL_ID = "my_notification_channel";
+
+
+
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -27,7 +33,11 @@ class ProximityIntentReceiver extends BroadcastReceiver {
 
         Boolean entering = intent.getBooleanExtra(key, false);
 
-        if (entering) {
+
+        SharedPreferences sharedPreferences = context.getSharedPreferences("preference_key", Context.MODE_PRIVATE);
+        final boolean notification = sharedPreferences.getBoolean("notification", true);
+
+        if (entering &&notification ) {
 
             //Push Notification
             NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);

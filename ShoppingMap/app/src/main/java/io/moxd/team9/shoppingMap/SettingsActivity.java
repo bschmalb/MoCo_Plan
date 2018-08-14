@@ -5,6 +5,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.os.Build;
@@ -23,13 +24,17 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private static final int NOTIFICATION_ID = 1;
     private static final String NOTIFICATION_CHANNEL_ID = "my_notification_channel";
 
-    public boolean switchOnOff = true;
+
+    //public boolean switchOnOff = true;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+
 
         Button sendPush = findViewById(R.id.buttonSendPush);
         Switch switch1 = findViewById(R.id.switch1);
@@ -45,7 +50,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
 
-        if(switchOnOff == true) {
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("preference_key", Context.MODE_PRIVATE);
+        final boolean notification = sharedPreferences.getBoolean("notification", true);
+        if(notification) {
 
 
             NotificationManager nm = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -82,10 +89,18 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(isChecked){
-            switchOnOff = true;
+            //switchOnOff = true;
+            SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("preference_key", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("notification", true);
+            editor.commit();
         }
         else{
-            switchOnOff = false;
+            //switchOnOff = false;
+            SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("preference_key", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("notification", false);
+            editor.commit();
         }
     }
 }
