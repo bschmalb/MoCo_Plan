@@ -11,5 +11,4 @@ public class StoreProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_store_profile);
 
     }
-
 }

@@ -36,8 +36,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         firebaseAuth = FirebaseAuth.getInstance();
 
         if(firebaseAuth.getCurrentUser() != null){
-            //UserProfileActivity here
-            //finish();
             startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
         }
 
@@ -94,7 +92,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         });
 
     }
-
 
     @Override
     public void onClick(View v) {

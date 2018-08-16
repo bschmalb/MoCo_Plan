@@ -34,7 +34,6 @@ import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class PlanActivity extends AppCompatActivity implements OnClickListener{
 
-
     //Layout
     Button btnEGOG;
     ImageView ivEG;
@@ -79,12 +78,10 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan);
 
-
         nv = findViewById(R.id.nv1);
 
         nav_header_email = nv.findViewById(R.id.nav_header_email);
         buttonRound = nv.findViewById(R.id.buttonRound);
-
 
         btnShowAllStores = findViewById(R.id.btnShowAllStores);
         btnShowAllStores.setOnClickListener(this);
@@ -96,13 +93,10 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
         ivEG = mainLayout.findViewById(R.id.ivEG);
         ivOG = mainLayout.findViewById(R.id.ivOG);
 
-
         mAttacher = new PhotoViewAttacher(ivEG);
         nAttacher = new PhotoViewAttacher(ivOG);
 
-
         firebaseAuth = FirebaseAuth.getInstance();
-
 
         //ActionBar
         mDrawerLayout = findViewById(R.id.DrawerLayout);
@@ -111,7 +105,6 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
         mToggle.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -140,18 +133,6 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
             }
         });
 
-
-        if (firebaseAuth.getCurrentUser() != null) {
-            System.out.println("Bin doch nicht verwirrt!");
-            //finish();
-            //FirebaseUser user = firebaseAuth.getCurrentUser();
-            //nav_header_email.setText(user.getEmail());
-
-            //nav_header_email.setVisibility(View.VISIBLE);
-            //buttonRound.setText("ME");
-        }
-
-
         //Geo/GPS Push Notification with BroadcastReceiver
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
@@ -176,11 +157,8 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
                 PROX_ALERT_EXPIRATION, // time for this proximity alert, in milliseconds, or -1 to indicate no expiration
                 proximityIntent // will be used to generate an Intent to fire when entry to or exit from the alert region is detected
         );
-
         IntentFilter filter = new IntentFilter(PROX_ALERT_INTENT);
         registerReceiver(new ProximityIntentReceiver(), filter);
-
-
     }
 
 
@@ -205,7 +183,6 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
             case (R.id.btnShowAllStores):
                 startActivity(new Intent(getApplicationContext(), StoreListActivity.class));
                 break;
-
         }
 
     }
@@ -218,6 +195,5 @@ public class PlanActivity extends AppCompatActivity implements OnClickListener{
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 }

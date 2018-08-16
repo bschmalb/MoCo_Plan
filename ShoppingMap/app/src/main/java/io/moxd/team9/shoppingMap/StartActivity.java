@@ -9,10 +9,6 @@ import android.widget.ImageView;
 public class StartActivity extends AppCompatActivity {
 
     ImageView logo;
-
-    //private FirebaseAuth firebaseAuth;
-
-
     private static int SPLASH_TIME_OUT= 2000;
 
 
@@ -24,15 +20,6 @@ public class StartActivity extends AppCompatActivity {
         logo = findViewById(R.id.logo);
         logo.setImageResource(R.drawable.forumlogo);
 
-        //firebaseAuth = FirebaseAuth.getInstance();
-
-        /**if(firebaseAuth.getCurrentUser() == null){
-            finish();
-            startActivity(new Intent(this, PlanActivity.class));
-        }**/
-
-        //FirebaseUser user = firebaseAuth.getCurrentUser();
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -42,14 +29,10 @@ public class StartActivity extends AppCompatActivity {
             }
         }, SPLASH_TIME_OUT);
 
-
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
     }
-
 }

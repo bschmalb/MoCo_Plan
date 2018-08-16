@@ -1,7 +1,5 @@
 package io.moxd.team9.shoppingMap;
 
-
-
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -60,9 +58,6 @@ public class UserProfileEditActivity extends AppCompatActivity implements View.O
         return false;
     }
 
-
-
-
    @Override
     public void onClick(View v) {
         String name = editTextName.getText().toString().trim();
@@ -91,8 +86,6 @@ public class UserProfileEditActivity extends AppCompatActivity implements View.O
                             Toast.makeText(UserProfileEditActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                         }
                     });
-
-
                 }
     }
 }

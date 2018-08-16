@@ -14,7 +14,7 @@ import android.media.RingtoneManager;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.widget.Toast;
+
 
 
 
@@ -23,16 +23,11 @@ class ProximityIntentReceiver extends BroadcastReceiver {
     private static final int NOTIFICATION_ID = 1;
     private static final String NOTIFICATION_CHANNEL_ID = "my_notification_channel";
 
-
-
-
     @Override
     public void onReceive(Context context, Intent intent) {
 
         String key = LocationManager.KEY_PROXIMITY_ENTERING;
-
         Boolean entering = intent.getBooleanExtra(key, false);
-
 
         SharedPreferences sharedPreferences = context.getSharedPreferences("preference_key", Context.MODE_PRIVATE);
         final boolean notification = sharedPreferences.getBoolean("notification", true);
@@ -44,7 +39,6 @@ class ProximityIntentReceiver extends BroadcastReceiver {
             Intent resultIntent = new Intent(context, PlanActivity.class);
             resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             PendingIntent resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
 
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
                 NotificationChannel nChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "My Notifications", NotificationManager.IMPORTANCE_DEFAULT);
@@ -67,14 +61,8 @@ class ProximityIntentReceiver extends BroadcastReceiver {
 
             //Info
             Log.d(getClass().getSimpleName(), "entering");
-
-
-
         } else {
             Log.d(getClass().getSimpleName(), "exiting");
-
         }
-
     }
-
 }

@@ -24,27 +24,17 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private static final int NOTIFICATION_ID = 1;
     private static final String NOTIFICATION_CHANNEL_ID = "my_notification_channel";
 
-
-    //public boolean switchOnOff = true;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-
 
         Button sendPush = findViewById(R.id.buttonSendPush);
         Switch switch1 = findViewById(R.id.switch1);
 
         switch1.setOnCheckedChangeListener(this);
 
-
         sendPush.setOnClickListener(this);
-
-
     }
 
     @Override
@@ -53,13 +43,10 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("preference_key", Context.MODE_PRIVATE);
         final boolean notification = sharedPreferences.getBoolean("notification", true);
         if(notification) {
-
-
             NotificationManager nm = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
             Intent resultIntent = new Intent(this, PlanActivity.class);
             resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             PendingIntent resultPendingIntent = PendingIntent.getActivity(this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 NotificationChannel nChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "My Notifications", NotificationManager.IMPORTANCE_DEFAULT);
@@ -84,7 +71,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             Toast.makeText(this, "Notification off!", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

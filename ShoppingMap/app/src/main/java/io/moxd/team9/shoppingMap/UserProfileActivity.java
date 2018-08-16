@@ -101,16 +101,11 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
             //Hier finish() sinnvoll, da wir uns ausloggen und nicht mehr aufs Profil zugreifen wollen
             finish();
             startActivity(new Intent(UserProfileActivity.this, PlanActivity.class));
-
         }
 
         if(v == buttonEdit){
             finish();
             startActivity(new Intent(UserProfileActivity.this, UserProfileEditActivity.class));
-
         }
-
     }
-
-
 }
